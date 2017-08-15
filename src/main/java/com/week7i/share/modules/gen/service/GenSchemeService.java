@@ -3,25 +3,20 @@
  */
 package com.week7i.share.modules.gen.service;
 
-import java.util.List;
-import java.util.Map;
-
 import com.week7i.share.common.persistence.Page;
 import com.week7i.share.common.service.BaseService;
 import com.week7i.share.common.utils.StringUtils;
 import com.week7i.share.modules.gen.dao.GenSchemeDao;
 import com.week7i.share.modules.gen.dao.GenTableColumnDao;
 import com.week7i.share.modules.gen.dao.GenTableDao;
+import com.week7i.share.modules.gen.entity.*;
 import com.week7i.share.modules.gen.util.GenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.week7i.share.modules.gen.entity.GenConfig;
-import com.week7i.share.modules.gen.entity.GenScheme;
-import com.week7i.share.modules.gen.entity.GenTable;
-import com.week7i.share.modules.gen.entity.GenTableColumn;
-import com.week7i.share.modules.gen.entity.GenTemplate;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 生成方案Service
@@ -84,7 +79,7 @@ public class GenSchemeService extends BaseService {
 		// 获取所有代码模板
 		GenConfig config = GenUtils.getConfig();
 		
-		// 获取模板列表
+		// 获取模板列表 共计7个:1:dao 2:service 3:controller 4:dao.xml 5:form 6:list 7:entity
 		List<GenTemplate> templateList = GenUtils.getTemplateList(config, genScheme.getCategory(), false);
 		List<GenTemplate> childTableTemplateList = GenUtils.getTemplateList(config, genScheme.getCategory(), true);
 		

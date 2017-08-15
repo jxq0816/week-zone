@@ -3,20 +3,19 @@
  */
 package com.week7i.share.test.service;
 
-import java.util.List;
-
+import com.week7i.share.common.persistence.Page;
 import com.week7i.share.common.service.CrudService;
+import com.week7i.share.test.dao.TestDataDao;
+import com.week7i.share.test.entity.TestData;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.week7i.share.common.persistence.Page;
-import com.week7i.share.test.entity.TestData;
-import com.week7i.share.test.dao.TestDataDao;
+import java.util.List;
 
 /**
- * 单表生成Service
- * @author ThinkGem
- * @version 2015-04-06
+ * 测试Service
+ * @author jiangxingqi
+ * @version 2017-08-14
  */
 @Service
 @Transactional(readOnly = true)
