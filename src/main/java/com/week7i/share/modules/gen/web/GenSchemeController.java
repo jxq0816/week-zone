@@ -3,13 +3,15 @@
  */
 package com.week7i.share.modules.gen.web;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.week7i.share.common.persistence.Page;
 import com.week7i.share.common.utils.StringUtils;
+import com.week7i.share.common.web.BaseController;
+import com.week7i.share.modules.gen.entity.GenScheme;
+import com.week7i.share.modules.gen.service.GenSchemeService;
 import com.week7i.share.modules.gen.service.GenTableService;
+import com.week7i.share.modules.gen.util.GenUtils;
 import com.week7i.share.modules.sys.entity.User;
+import com.week7i.share.modules.sys.utils.UserUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,16 +21,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.week7i.share.common.web.BaseController;
-import com.week7i.share.modules.sys.utils.UserUtils;
-import com.week7i.share.modules.gen.entity.GenScheme;
-import com.week7i.share.modules.gen.service.GenSchemeService;
-import com.week7i.share.modules.gen.util.GenUtils;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
- * 生成方案Controller
- * @author ThinkGem
- * @version 2013-10-15
+ * 生成方案Controller 对应 代码生成-生成方案配置
+ * @author jiangxingqi
+ * @version 2017-08-15
  */
 @Controller
 @RequestMapping(value = "${adminPath}/gen/genScheme")

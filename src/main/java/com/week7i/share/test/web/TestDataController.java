@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 测试Controller
+ * 测试Controller 对应 代码生成-生成示例-单表
  * @author jiangxingqi
  * @version 2017-08-14
  */
