@@ -1,4 +1,4 @@
-# Jiang_frame_mini
+# share_frame_mini
 ## 简化版本所支持的功能
 1. 菜单管理
 2. 人员管理
