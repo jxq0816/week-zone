@@ -4,9 +4,6 @@
 	<filePath>src/main/java/${packageName}/${moduleName}/entity/${subModuleName}</filePath>
 	<fileName>${ClassName}.java</fileName>
 	<content><![CDATA[
-/**
- * Copyright &copy; 2018-2028 <a href="https://github.com/jxq0816/share_frame_mini">share</a> All rights reserved.
- */
 package ${packageName}.${moduleName}.entity<#if subModuleName != "">.${subModuleName}</#if>;
 
 <#list table.importList as i>
