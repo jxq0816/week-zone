@@ -108,19 +108,6 @@
 			$("#userInfo .dropdown-menu a").mouseup(function(){
 				return addTab($(this), true);
 			});// </c:if>
-			// 获取通知数目  <c:set var="oaNotifyRemindInterval" value="${fns:getConfig('oa.notify.remind.interval')}"/>
-			function getNotifyNum(){
-				$.get("${ctx}/oa/oaNotify/self/count?t="+new Date().getTime(),function(data){
-					var num = parseFloat(data);
-					if (num > 0){
-						$("#notifyNum,#notifyNum2").show().html("("+num+")");
-					}else{
-						$("#notifyNum,#notifyNum2").hide()
-					}
-				});
-			}
-			getNotifyNum(); //<c:if test="${oaNotifyRemindInterval ne '' && oaNotifyRemindInterval ne '0'}">
-			setInterval(getNotifyNum, ${oaNotifyRemindInterval}); //</c:if>
 		});
 		// <c:if test="${cookie.tabmode.value eq '1'}"> 添加一个页签
 		function addTab($this, refresh){
