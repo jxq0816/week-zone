@@ -98,8 +98,7 @@ public class NewsController extends BaseController {
 	public String exportFile(News news, HttpServletRequest request, HttpServletResponse response, RedirectAttributes redirectAttributes) {
 		try {
 			String fileName = "新闻维度数据"+ DateUtils.getDate("yyyyMMddHHmmss")+".xlsx";
-			Page<News> page = newsService.findPage(new Page<News>(request, response, -1), news);
-			List list=page.getList();
+			List<News> list=newsService.findList(news);
 			ExportExcel exportExcel=new ExportExcel("新闻维度数据", News.class);
 			exportExcel.setDataList(list);
 			exportExcel.write(response, fileName);

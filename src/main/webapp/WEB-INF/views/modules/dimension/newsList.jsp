@@ -71,7 +71,7 @@
 				</a></td>
 
 				<td>
-						${news.createBy.id}
+						${news.updateBy.name}
 				</td>
 
 				<td>

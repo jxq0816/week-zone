@@ -10,12 +10,14 @@
 		a.create_by AS "createBy.id",
 		a.create_date AS "createDate",
 		a.update_by AS "updateBy.id",
+		sys_user.name AS "updateBy.name",
 		a.update_date AS "updateDate",
 		a.remarks AS "remarks",
 		a.del_flag AS "delFlag"
 	</sql>
 	
 	<sql id="newsJoins">
+		LEFT JOIN sys_user ON sys_user.id = a.update_by
 	</sql>
     
 	<select id="get" resultType="News">
