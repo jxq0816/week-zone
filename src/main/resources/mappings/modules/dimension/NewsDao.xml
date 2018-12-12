@@ -23,7 +23,7 @@
 	<select id="get" resultType="News">
 		SELECT 
 			<include refid="newsColumns"/>
-		FROM news a
+		FROM dim_news a
 		<include refid="newsJoins"/>
 		WHERE a.id = #{id}
 	</select>
@@ -31,7 +31,7 @@
 	<select id="findList" resultType="News">
 		SELECT 
 			<include refid="newsColumns"/>
-		FROM news a
+		FROM dim_news a
 		<include refid="newsJoins"/>
 		<where>
 			a.del_flag = #{DEL_FLAG_NORMAL}
@@ -55,7 +55,7 @@
 	<select id="findAllList" resultType="News">
 		SELECT 
 			<include refid="newsColumns"/>
-		FROM news a
+		FROM dim_news a
 		<include refid="newsJoins"/>
 		<where>
 			a.del_flag = #{DEL_FLAG_NORMAL}
@@ -71,7 +71,7 @@
 	</select>
 	
 	<insert id="insert">
-		INSERT INTO news(
+		INSERT INTO dim_news(
 			id,
 			campaign_id,
 			title,
@@ -97,7 +97,7 @@
 	</insert>
 	
 	<update id="update">
-		UPDATE news SET 	
+		UPDATE dim_news SET
 			campaign_id = #{campaignId},
 			title = #{title},
 			url = #{url},
@@ -108,7 +108,7 @@
 	</update>
 	
 	<update id="delete">
-		UPDATE news SET 
+		UPDATE dim_news SET
 			del_flag = #{DEL_FLAG_DELETE}
 		WHERE id = #{id}
 	</update>
