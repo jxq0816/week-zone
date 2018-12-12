@@ -150,7 +150,6 @@ CREATE TABLE sys_role
 	office_id varchar(64) COMMENT '归属机构',
 	name varchar(100) NOT NULL COMMENT '角色名称',
 	enname varchar(255) COMMENT '英文名称',
-	role_type varchar(255) COMMENT '角色类型',
 	data_scope char(1) COMMENT '数据范围',
 	is_sys varchar(64) COMMENT '是否系统数据',
 	useable varchar(64) COMMENT '是否可用',
