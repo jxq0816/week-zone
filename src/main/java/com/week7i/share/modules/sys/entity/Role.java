@@ -14,8 +14,8 @@ import com.week7i.share.common.persistence.DataEntity;
 
 /**
  * 角色Entity
- * @author ThinkGem
- * @version 2013-12-05
+ * @author xingqijiang
+ * @version 2018-12-12
  */
 public class Role extends DataEntity<Role> {
 	
@@ -23,7 +23,6 @@ public class Role extends DataEntity<Role> {
 	private Office office;	// 归属机构
 	private String name; 	// 角色名称
 	private String enname;	// 英文名称
-	private String roleType;// 权限类型
 	private String dataScope;// 数据范围
 	
 	private String oldName; 	// 原角色名称
@@ -101,15 +100,6 @@ public class Role extends DataEntity<Role> {
 
 	public void setEnname(String enname) {
 		this.enname = enname;
-	}
-	
-	@Length(min=1, max=100)
-	public String getRoleType() {
-		return roleType;
-	}
-
-	public void setRoleType(String roleType) {
-		this.roleType = roleType;
 	}
 
 	public String getDataScope() {

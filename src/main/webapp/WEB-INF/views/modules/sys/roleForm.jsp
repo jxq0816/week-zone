@@ -127,21 +127,21 @@
 				<span class="help-inline"><font color="red">*</font> 工作流用户组标识</span>
 			</div>
 		</div>
-		<div class="control-group">
-			<label class="control-label">角色类型:</label>
-			<div class="controls"><%--
-				<form:input path="roleType" htmlEscape="false" maxlength="50" class="required"/>
-				<span class="help-inline" title="activiti有3种预定义的组类型：security-role、assignment、user 如果使用Activiti Explorer，需要security-role才能看到manage页签，需要assignment才能claim任务">
-					工作流组用户组类型（security-role：管理员、assignment：可进行任务分配、user：普通用户）</span> --%>
-				<form:select path="roleType" class="input-medium">
-					<form:option value="assignment">任务分配</form:option>
-					<form:option value="security-role">管理角色</form:option>
-					<form:option value="user">普通角色</form:option>
-				</form:select>
-				<span class="help-inline" title="activiti有3种预定义的组类型：security-role、assignment、user 如果使用Activiti Explorer，需要security-role才能看到manage页签，需要assignment才能claim任务">
-					工作流组用户组类型（任务分配：assignment、管理角色：security-role、普通角色：user）</span>
-			</div>
-		</div>
+		<%--<div class="control-group">--%>
+			<%--<label class="control-label">角色类型:</label>--%>
+			<%--<div class="controls">&lt;%&ndash;--%>
+				<%--<form:input path="roleType" htmlEscape="false" maxlength="50" class="required"/>--%>
+				<%--<span class="help-inline" title="activiti有3种预定义的组类型：security-role、assignment、user 如果使用Activiti Explorer，需要security-role才能看到manage页签，需要assignment才能claim任务">--%>
+					<%--工作流组用户组类型（security-role：管理员、assignment：可进行任务分配、user：普通用户）</span> &ndash;%&gt;--%>
+				<%--<form:select path="roleType" class="input-medium">--%>
+					<%--<form:option value="assignment">任务分配</form:option>--%>
+					<%--<form:option value="security-role">管理角色</form:option>--%>
+					<%--<form:option value="user">普通角色</form:option>--%>
+				<%--</form:select>--%>
+				<%--<span class="help-inline" title="activiti有3种预定义的组类型：security-role、assignment、user 如果使用Activiti Explorer，需要security-role才能看到manage页签，需要assignment才能claim任务">--%>
+					<%--工作流组用户组类型（任务分配：assignment、管理角色：security-role、普通角色：user）</span>--%>
+			<%--</div>--%>
+		<%--</div>--%>
 		<div class="control-group">
 			<label class="control-label">是否系统数据:</label>
 			<div class="controls">

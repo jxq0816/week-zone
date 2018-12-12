@@ -6,7 +6,6 @@
 		<id property="id" column="id" />
 		<result property="name" column="name" />
 		<result property="enname" column="enname" />
-		<result property="roleType" column="roleType" />
 		<result property="dataScope" column="dataScope" />
 		<result property="remarks" column="remarks" />
 		<result property="useable" column="useable" />
@@ -34,7 +33,6 @@
     	a.office_id AS "office.id",
     	a.name,
     	a.enname,
-    	a.role_type AS roleType,
 		a.data_scope AS dataScope,
 		a.remarks,
 		a.create_by AS "createBy.id",
@@ -123,8 +121,7 @@
 			id, 
 			office_id, 
 			name, 
-			enname, 
-			role_type, 
+			enname,
 			data_scope, 
 			create_by, 
 			create_date, 
@@ -138,8 +135,7 @@
 			#{id}, 
 			#{office.id}, 
 			#{name}, 
-			#{enname}, 
-			#{roleType}, 
+			#{enname},
 			#{dataScope}, 
 			#{createBy.id}, 
 			#{createDate}, 
@@ -156,8 +152,7 @@
 		UPDATE sys_role SET 
 			office_id = #{office.id}, 
 			name = #{name}, 
-			enname = #{enname}, 
-			role_type = #{roleType}, 
+			enname = #{enname},
 			data_scope = #{dataScope}, 
 			update_by = #{updateBy.id}, 
 			update_date = #{updateDate}, 
