@@ -50,6 +50,9 @@
 			<if test="campaignId != null and campaignId != ''">
 				And a.campaign_id =#{campaignId}
 			</if>
+            <if test="updateBy !=null and updateBy.name != null and updateBy.name != ''">
+                And sys_user.name = #{updateBy.name}
+            </if>
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">

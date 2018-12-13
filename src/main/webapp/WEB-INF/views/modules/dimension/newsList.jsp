@@ -35,15 +35,19 @@
 		<ul class="ul-form">
 			<li>
 				&nbsp;ID:&nbsp;
-				<form:input path="campaignId" htmlEscape="false" maxlength="20" class="input-medium"/>
+				<form:input path="campaignId" htmlEscape="false" maxlength="10" class="input-small"/>
 				&nbsp;标题:&nbsp;
-				<form:input path="title" htmlEscape="false" maxlength="20" class="input-medium"/>
+				<form:input path="title" htmlEscape="false" maxlength="10" class="input-small"/>
 				&nbsp;日期:&nbsp;
 				<input id="beginDate" name="beginDate" type="text" readonly="readonly" maxlength="20" class="input-mini Wdate"
 												 value="<fmt:formatDate value="${news.beginDate}" pattern="yyyy-MM-dd"/>" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>
-				&nbsp;至&nbsp;<input id="endDate" name="endDate" type="text" readonly="readonly" maxlength="20" class="input-mini Wdate"
-																			value="<fmt:formatDate value="${news.endDate}" pattern="yyyy-MM-dd"/>" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>&nbsp;&nbsp;
-			</li>
+				&nbsp;至&nbsp;
+                <input id="endDate" name="endDate" type="text" readonly="readonly" maxlength="20" class="input-mini Wdate"
+                       value="<fmt:formatDate value="${news.endDate}" pattern="yyyy-MM-dd"/>"
+                       onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>&nbsp;&nbsp;
+                &nbsp;更新人:&nbsp;
+                <form:input path="updateBy.name" htmlEscape="false" maxlength="10" class="input-small"/>
+            </li>
 			<li class="btns">
 				<input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/>
 				<input id="btnExport" class="btn btn-primary" type="button" value="导出"/>
