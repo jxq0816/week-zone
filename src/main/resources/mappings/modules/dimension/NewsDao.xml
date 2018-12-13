@@ -47,6 +47,9 @@
 			<if test="endDate != null and endDate != ''">
 				And datediff(a.update_date,#{endDate}) &lt;= 0
 			</if>
+			<if test="campaignId != null and campaignId != ''">
+				And a.campaign_id =#{campaignId}
+			</if>
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
