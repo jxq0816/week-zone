@@ -203,7 +203,7 @@
 				</div>
 			</div>
 		    <div id="footer" class="row-fluid">
-	            Copyright &copy; 2018-${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')}<!--  - Powered By Sina ${fns:getConfig('version')} -->
+	            Copyright &copy; ${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')}<!--  - Powered By ${fns:getConfig('copyrightCompany')} ${fns:getConfig('version')} -->
 			</div>
 		</div>
 	</div>

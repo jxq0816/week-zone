@@ -151,7 +151,6 @@
 						<ul class="dropdown-menu">
 							<li><a href="${ctx}/sys/user/info" target="mainFrame"><i class="icon-user"></i>&nbsp; 个人信息</a></li>
 							<li><a href="${ctx}/sys/user/modifyPwd" target="mainFrame"><i class="icon-lock"></i>&nbsp;  修改密码</a></li>
-							<li><a href="${ctx}/oa/oaNotify/self" target="mainFrame"><i class="icon-bell"></i>&nbsp;  我的通知 <span id="notifyNum2" class="label label-info hide"></span></a></li>
 						</ul>
 					</li>
 					<li><a href="${ctx}/logout" title="退出登录">退出</a></li>
@@ -208,7 +207,7 @@
 				</div>
 			</div>
 		    <div id="footer" class="row-fluid">
-	            Copyright &copy; 2018-${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')} - Powered By Sina ${fns:getConfig('version')}
+	            Copyright &copy; ${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')} - Powered By ${fns:getConfig('copyrightCompany')} ${fns:getConfig('version')}
 			</div>
 		</div>
 	</div>
