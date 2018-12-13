@@ -41,6 +41,12 @@
 					<if test="dbName == 'mssql'">'%'+#{title}+'%'</if>
 					<if test="dbName == 'mysql'">concat('%',#{title},'%')</if>
 			</if>
+			<if test="beginDate != null and beginDate != ''">
+				And datediff(#{beginDate},a.update_date) &lt;= 0
+			</if>
+			<if test="endDate != null and endDate != ''">
+				And datediff(a.update_date,#{endDate}) &lt;= 0
+			</if>
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">

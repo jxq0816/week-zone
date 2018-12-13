@@ -29,6 +29,9 @@ public abstract class DataEntity<T> extends BaseEntity<T> {
 	protected User updateBy;	// 更新者
 	protected Date updateDate;	// 更新日期
 	protected String delFlag; 	// 删除标记（0：正常；1：删除；2：审核）
+
+	private Date beginDate;		// 开始日期
+	private Date endDate;		// 结束日期
 	
 	public DataEntity() {
 		super();
@@ -122,6 +125,22 @@ public abstract class DataEntity<T> extends BaseEntity<T> {
 
 	public void setDelFlag(String delFlag) {
 		this.delFlag = delFlag;
+	}
+
+	public Date getBeginDate() {
+		return beginDate;
+	}
+
+	public void setBeginDate(Date beginDate) {
+		this.beginDate = beginDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 }
