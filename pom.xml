@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.week7i.share</groupId>
-	<artifactId>shareFrame</artifactId>
+	<artifactId>week-zone</artifactId>
 	<version>1.2.7</version>
 	<packaging>war</packaging>
 	
-	<name>shareFrame</name>
-	<url>https://github.com/jxq0816/share_frame.git</url>
+	<name>week-zone</name>
+	<url>https://github.com/jxq0816/week-zone</url>
 	<inceptionYear>2017-2027</inceptionYear>
 	
 	<!-- 项目属性 -->
@@ -820,7 +820,7 @@
 	<developers>  
 		<developer>
 			<id>week7i</id>
-			<name>jiangxingqi</name>
+			<name>xingqijiang</name>
 			<email>jxq0816@126.com</email>
 			<roles><role>Project lead</role></roles>
 			<timezone>+8</timezone>
